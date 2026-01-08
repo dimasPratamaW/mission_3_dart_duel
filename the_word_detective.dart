@@ -9,22 +9,21 @@ void checkingPalindrome(String kata) {
   }
 }
 
-void countingVowel(String kata){
-  List<String> vowel = ["a","i","u","e","o"];
-  int jumlahVokal = 0;
+void countingVowel(String kata) {
+  List<String> vowel = ["a", "i", "u", "e", "o"];
+  int jumlahVowel = 0;
   List<String> kataTerpisah = kata.toLowerCase().split('');
 
-  for(int i =0;i<kataTerpisah.length;i++){
-    for(String letter in vowel){
-        if(letter == kataTerpisah[i]){
-          jumlahVokal++;
-        }
+  for (int i = 0; i < kataTerpisah.length; i++) {
+    for (String letter in vowel) {
+      if (letter == kataTerpisah[i]) {
+        jumlahVowel++;
+      }
     }
   }
 
-  return print("- Jumlah Huruf Vokal ${jumlahVokal}");
+  return print("- Jumlah Huruf Vokal ${jumlahVowel}");
 }
-
 
 void main() {
   String kata = 'katako';
